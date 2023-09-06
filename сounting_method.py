@@ -7,11 +7,20 @@
 # print(count)
 
 
-n = list(map(int, input()))
-result = [0]*(max(n)+1)
-for i in n:
-    result[i] += 1
+# n = list(map(int, input()))
+# result = [0]*(max(n)+1)
+# for i in n:
+#     result[i] += 1
+# print(result)
+# for i in range(len(result)):
+#     if result[i] > 0:
+#         print(i, result[i])
+
+n = int(input())
+element = list(map(int, input().split()))
+result = []
+while len(element) > 0:
+    result.append(min(element))
+    element.remove(min(element))
 print(result)
-for i in range(len(result)):
-    if result[i] > 0:
-        print(i, result[i])
+
