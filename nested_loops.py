@@ -8,18 +8,17 @@
 # for i in n:
 #     print('*'*i)
 
+# по числу n найти количество простых чисел p из интервала n < p < 2n. Постулат Бертрана
 n = int(input())
-# p = 7 % 7
-# if p % p == 0
-# print(p)
 p = 0
-for i in range(n+1,n*2+1):
-    #print(p)
+for i in range(n+1,n*2):
+    if i % 2 == 0 and i != 2 or i == 1:
+        continue
     count = 0
-    for j in range(2,int(i**0.5+1)):
+    for j in range(1,int(i**0.5+1)):
         if i % j == 0:
             count += 1
-            #print('простое число: ', i, "делить на ", j)
+
     if count == 1:
         p += 1
 print(p)
